@@ -6,9 +6,9 @@ NicePi is a Python based monitoring tool for NiceHash, aimed to be run on a Rasp
 
 Prerequisites:
 1. Almost any RaspberryPi (with GPIO support):
-    https://thepihut.com/collections/raspberry-pi/products/raspberry-pi-zero-wh-with-pre-soldered-header
+    - https://thepihut.com/collections/raspberry-pi/products/raspberry-pi-zero-wh-with-pre-soldered-header
 3. Any SPI/I2C GPIO display:
-    https://thepihut.com/collections/raspberry-pi-screens/products/128x32-2-23inch-oled-display-hat-for-raspberry-pi
+    - https://thepihut.com/collections/raspberry-pi-screens/products/128x32-2-23inch-oled-display-hat-for-raspberry-pi
 4. SD Card 8GB or higher -- image it with Raspberry Pi OS Lite
 5. Power Cable & Charger/Battery Bank
 
@@ -18,8 +18,8 @@ Build the Device:
 3. Plug in Power
 4. Install OS
 5. Enable SPI in Raspi Config
-    sudo raspi-config
-    select Interface Options > SPI > Yes
+    - sudo raspi-config
+    - select Interface Options > SPI > Yes
 6. Reboot the Pi
 
 Software & Install:
