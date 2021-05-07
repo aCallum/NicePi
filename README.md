@@ -46,4 +46,4 @@ Run
     - sudo python3 main.py
 
 Support Me
-https://ko-fi.com/alastaircallum
+https://ko-fi.com/aCallum
