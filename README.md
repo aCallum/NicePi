@@ -28,3 +28,6 @@ Software & Install:
 Run
 1. Change to project folder (cd NicePi)
 2. Run it with Python3 (sudo python3 main.py)
+
+Support Me
+https://ko-fi.com/alastaircallum
