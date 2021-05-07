@@ -46,4 +46,5 @@ Run
     - sudo python3 main.py
 
 Support Me
-https://ko-fi.com/aCallum
+BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
+Or buy me a coffee: https://ko-fi.com/aCallum
