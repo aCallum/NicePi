@@ -122,25 +122,31 @@ while True:
             continue
         
 
-        previousProfitability = currentProfitability
-        currentProfitability = float(data["totalProfitability"])
+        try:
+            previousProfitability = currentProfitability
+            currentProfitability = float(data["totalProfitability"])
 
-        previousUnpaidBalance = currentUnpaidBalance
-        currentUnpaidBalance = float(data["unpaidAmount"])
+            previousUnpaidBalance = currentUnpaidBalance
+            currentUnpaidBalance = float(data["unpaidAmount"])
 
-        previousBalance = currentBalance
-        currentBalance = float(accountData["available"]) 
+            previousBalance = currentBalance
+            currentBalance = float(accountData["available"]) 
 
-        # prevAvailablePayout = data["lastPayoutTimestamp"]
-        nextAvailablePayout = data["nextPayoutTimestamp"]
+            # prevAvailablePayout = data["lastPayoutTimestamp"]
+            nextAvailablePayout = data["nextPayoutTimestamp"]
 
-        rigCount = int(data["totalRigs"])
-        previousTotalAcceptedSpeed = currentTotalAceptedSpeed
+            rigCount = int(data["totalRigs"])
+            previousTotalAcceptedSpeed = currentTotalAceptedSpeed
 
-        currentTotalAceptedSpeed = 0
-        for i in range(rigCount):
-            if data["miningRigs"][i]["minerStatus"] == "MINING":
-                currentTotalAceptedSpeed += float(data["miningRigs"][i]["stats"][0]["speedAccepted"])
+            currentTotalAceptedSpeed = 0
+            for i in range(rigCount):
+                if data["miningRigs"][i]["minerStatus"] == "MINING":
+                    currentTotalAceptedSpeed += float(data["miningRigs"][i]["stats"][0]["speedAccepted"])
+
+        except Exception as e:
+            displayToShow = -1
+            error = e
+            continue
 
         est_time_withdrawal = (0.0005 - (currentBalance + currentUnpaidBalance)) / (currentProfitability / 24.)
         est_time_withdrawal = timedelta(hours = est_time_withdrawal)
