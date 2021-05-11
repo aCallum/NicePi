@@ -131,7 +131,7 @@ while True:
         previousBalance = currentBalance
         currentBalance = float(accountData["available"]) 
 
-        prevAvailablePayout = data["lastPayoutTimestamp"]
+        # prevAvailablePayout = data["lastPayoutTimestamp"]
         nextAvailablePayout = data["nextPayoutTimestamp"]
 
         rigCount = int(data["totalRigs"])
