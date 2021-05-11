@@ -89,7 +89,7 @@ profitabilityGBP = 0
 nextAvailablePayout = 0
 prevAvailablePayout = 0
 
-est_time_withdrawal = 0
+est_time_withdrawal = datetime.now()
 
 usdgbp = get_price()
 
