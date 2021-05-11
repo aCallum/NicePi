@@ -93,6 +93,8 @@ usdgbp = get_price()
 
 firstRun = True
 
+error = ""
+
 while True:
 
     screen_x_offset -= 1
@@ -109,8 +111,14 @@ while True:
         timeCheck = time.time()
         firstRun = False
 
-        data = private_api.get_rigs()
-        accountData = private_api.get_accounts_for_currency('BTC')
+        try:
+            data = private_api.get_rigs()
+            accountData = private_api.get_accounts_for_currency('BTC')
+        except Exception as e:
+            displayToShow = -1
+            error = e
+            continue
+        
 
         previousProfitability = currentProfitability
         currentProfitability = float(data["totalProfitability"])
@@ -161,6 +169,10 @@ while True:
             startTime = time.time()
             if displayToShow > 2:
                 displayToShow = 0
+
+        if displayToShow == -1:
+            draw.text((0, -1), "Error Receiving Data", fill='white', font=font)
+            draw.text((0, 32-6), "{0}".format(error), fill='white', font=font)
 
         if displayToShow == 0:
         
