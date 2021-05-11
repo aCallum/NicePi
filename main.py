@@ -89,6 +89,8 @@ profitabilityGBP = 0
 nextAvailablePayout = 0
 prevAvailablePayout = 0
 
+est_time_withdrawal
+
 usdgbp = get_price()
 
 firstRun = True
