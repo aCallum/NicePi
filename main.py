@@ -225,7 +225,7 @@ while True:
             draw.text((80, 5), "£{:.2f}".format(usdgbp * unpaidBalance_lbl), fill='white', font=font2)
 
             draw.text((0, 32-13), "Next Payout Date", fill='white', font=font)
-            draw.text((0, 32-6), nextAvailablePayout, fill='white', font=font)
+            draw.text((0, 32-6), "{0}".format(nextAvailablePayout), fill='white', font=font)
 
         # Experimental display Graph of MH/s over time
         # if displayToShow == 4:
