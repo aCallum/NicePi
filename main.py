@@ -31,6 +31,11 @@ def get_price():
     data = public_api.get_current_prices()
     return data["BTCUSDC"] * config.USD_GBP
 
+def utc_to_local(utc):
+    epoch = time.mktime(utc.timetuple())
+    offset = datetime.fromtimestamp(epoch) - datetime.utcfromtimestamp(epoch)
+    return utc + offset
+
 # Create public api object
 public_api = nicehash.public_api(False)
 
@@ -133,7 +138,8 @@ while True:
             currentBalance = float(accountData["available"]) 
 
             # prevAvailablePayout = data["lastPayoutTimestamp"]
-            nextAvailablePayout = data["nextPayoutTimestamp"]
+            nextAvailablePayout = datetime.strptime(data["nextPayoutTimestamp"],"%Y-%m-%dT%H:%M:%SZ")
+            nextAvailablePayout = utc_to_local(nextAvailablePayout)
 
             rigCount = int(data["totalRigs"])
             previousTotalAcceptedSpeed = currentTotalAceptedSpeed
@@ -148,7 +154,7 @@ while True:
             error = e
             continue
 
-        est_time_withdrawal = (0.0005 - (currentBalance + currentUnpaidBalance)) / (currentProfitability / 24.)
+        est_time_withdrawal = (config.WITHDRAWL_TARGET - (currentBalance + currentUnpaidBalance)) / (currentProfitability / 24.)
         est_time_withdrawal = timedelta(hours = est_time_withdrawal)
         est_time_withdrawal += datetime.now()
         
@@ -231,7 +237,7 @@ while True:
             draw.text((80, 5), "£{:.2f}".format(usdgbp * unpaidBalance_lbl), fill='white', font=font2)
 
             draw.text((0, 32-13), "Next Payout Date", fill='white', font=font)
-            draw.text((0, 32-6), "{0}".format(nextAvailablePayout), fill='white', font=font)
+            draw.text((0, 32-6), "{:%a %d %b %H:%M}".format(nextAvailablePayout), fill='white', font=font)
 
         # Experimental display Graph of MH/s over time
         # if displayToShow == 4:
