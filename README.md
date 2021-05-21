@@ -45,6 +45,16 @@ Run
 3. Run it with Python3 
     - sudo python3 main.py
 
+Automatic Boot:
+1. Enable auto-login
+    - sudo raspi-config
+    - Go to -> System Options -> Bott / Auto Login -> Console Autologin and press Enter
+2. Edit rc.locales file
+    - sudo nano /etc/rc.locales
+3. Copy this string before "exit 0"
+    - sudo python3 /home/pi/NicePi/main.py &
+
+
 Support Me
 
 BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
