@@ -45,6 +45,13 @@ Run
 3. Run it with Python3 
     - sudo python3 main.py
 
+Automatic Boot:
+1. Edit rc.locales file
+    - sudo nano /etc/rc.locales
+2. Copy this string before "exit 0"
+    - sudo python3 /home/pi/NicePi/main.py &
+
+
 Support Me
 
 BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
