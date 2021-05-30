@@ -4,6 +4,14 @@ NicePi is a Python based monitoring tool for NiceHash, aimed to be run on a Rasp
 
 ![alt text](https://github.com/aCallum/NicePi/blob/main/nciepi.jpg)
 
+## Support Me
+
+Thanks for checking out SafePi. It would be great to have your support in any way possible. Crypto donations, or a coffee to keep me coding are always welcome!
+
+BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
+
+Or buy me a coffee: https://ko-fi.com/aCallum
+
 Prerequisites:
 1. Almost any RaspberryPi (with GPIO support):
     - https://thepihut.com/collections/raspberry-pi/products/raspberry-pi-zero-wh-with-pre-soldered-header
@@ -45,7 +53,9 @@ Run
 3. Run it with Python3 
     - sudo python3 main.py
 
-Support Me
+## Support Me
+
+Thanks for checking out SafePi. It would be great to have your support in any way possible. Crypto donations, or a coffee to keep me coding are always welcome!
 
 BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
 
