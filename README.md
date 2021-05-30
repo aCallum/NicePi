@@ -6,7 +6,7 @@ NicePi is a Python based monitoring tool for NiceHash, aimed to be run on a Rasp
 
 ## Support Me
 
-Thanks for checking out SafePi. It would be great to have your support in any way possible. Crypto donations, or a coffee to keep me coding are always welcome!
+Thanks for checking out NicePi. It would be great to have your support in any way possible. Crypto donations, or a coffee to keep me coding are always welcome!
 
 BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
 
@@ -55,7 +55,7 @@ Run
 
 ## Support Me
 
-Thanks for checking out SafePi. It would be great to have your support in any way possible. Crypto donations, or a coffee to keep me coding are always welcome!
+Thanks for checking out NicePi. It would be great to have your support in any way possible. Crypto donations, or a coffee to keep me coding are always welcome!
 
 BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
 
